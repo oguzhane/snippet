@@ -22,8 +22,9 @@ then
 	$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.setHidden true)
 else
 	$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.setHidden false)
-	$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.showNormal)
-	$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.raise)
-	$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.setFocus)
-	$(xdotool windowactivate $winID &)
+	#$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.showNormal)
+	#$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.raise)
+	#$(qdbus org.kde.konsole-$pid /konsole/MainWindow_1 org.qtproject.Qt.QWidget.setFocus)
+	$(xdotool windowactivate $winID)
+	$(xdotool windowfocus $winID)
 fi
