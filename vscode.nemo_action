@@ -1,0 +1,7 @@
+[Nemo Action]
+Name=Open in Code
+Comment=Open in Code
+Quote=double
+Exec=code %F
+Selection=any
+Extensions=dir;
